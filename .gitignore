@@ -1,0 +1,47 @@
+### Xcode ###
+.build/
+build/
+DerivedData/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+timeline.xctimeline
+playground.xcworkspace
+.idea/
+ddp/
+
+### Carthage ###
+!Carthage/Checkouts
+Carthage/Build
+
+### fastlane ###
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/screenshots/screenshots.html
+fastlane/test_output
+fastlane_data/
+.env.local
+
+### macOS ###
+*.DS_Store
+.Trashes
+.AppleDouble
+.LSOverride
+Icon
+
+### Ruby ###
+.ruby-version
+vendor/bundle
+aws/
