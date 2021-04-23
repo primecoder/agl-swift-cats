@@ -2,6 +2,8 @@
 //  SwiftCatsTests.swift
 //  SwiftCatsTests
 //
+//  AGL Challenge Project
+//
 //  Created by Yilei He on 3/4/20.
 //  Copyright © 2020 Yilei He. All rights reserved.
 //
