@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		50EE401F26324A26003F4247 /* SwiftCatsMocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE401E26324A26003F4247 /* SwiftCatsMocked.swift */; };
+		50EE402726328549003F4247 /* ModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE402626328549003F4247 /* ModelsTests.swift */; };
 		B882EF9E2436AC2D00421A3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B882EF9D2436AC2D00421A3C /* AppDelegate.swift */; };
 		B882EFA02436AC2D00421A3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B882EF9F2436AC2D00421A3C /* SceneDelegate.swift */; };
 		B882EFA22436AC2D00421A3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B882EFA12436AC2D00421A3C /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		50EE401E26324A26003F4247 /* SwiftCatsMocked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCatsMocked.swift; sourceTree = "<group>"; };
+		50EE402626328549003F4247 /* ModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsTests.swift; sourceTree = "<group>"; };
 		B882EF9A2436AC2C00421A3C /* SwiftCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B882EF9D2436AC2D00421A3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B882EF9F2436AC2D00421A3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				B882EFB42436AC2F00421A3C /* SwiftCatsTests.swift */,
+				50EE402626328549003F4247 /* ModelsTests.swift */,
 				B882EFB62436AC2F00421A3C /* Info.plist */,
 				50EE401E26324A26003F4247 /* SwiftCatsMocked.swift */,
 			);
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B882EFB52436AC2F00421A3C /* SwiftCatsTests.swift in Sources */,
+				50EE402726328549003F4247 /* ModelsTests.swift in Sources */,
 				50EE401F26324A26003F4247 /* SwiftCatsMocked.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

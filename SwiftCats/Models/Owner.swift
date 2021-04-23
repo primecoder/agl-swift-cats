@@ -18,3 +18,24 @@ struct Owner: Decodable {
 
 typealias Owners = [Owner]  // aa: For convenient usage and readability
 typealias Pets = [Pet]      // aa: For convenient usage and readability
+
+extension Owners {
+    
+    /// Returns all genders found.
+    var genders: Set<String> { Set(self.map { $0.gender.lowercased() }) }
+    
+    /// Return all ages.
+    var ages: Set<Int> { Set(self.map { $0.age }) }
+    
+    /// Find pets by owner
+    /// Default ownerSelector is to return for all owners.
+    func findPetsByOwner(_ ownerSelector: (Owner) -> Bool = { _ in true } ) -> Pets {
+        var allPets = Pets()
+        for person in self {
+            if let pets = person.pets {
+                allPets.append(contentsOf: pets.filter { _ in ownerSelector(person) })
+            }
+        }
+        return allPets
+    }
+}
