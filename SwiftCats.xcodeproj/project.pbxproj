@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50EE401F26324A26003F4247 /* SwiftCatsMocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE401E26324A26003F4247 /* SwiftCatsMocked.swift */; };
 		B882EF9E2436AC2D00421A3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B882EF9D2436AC2D00421A3C /* AppDelegate.swift */; };
 		B882EFA02436AC2D00421A3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B882EF9F2436AC2D00421A3C /* SceneDelegate.swift */; };
 		B882EFA22436AC2D00421A3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B882EFA12436AC2D00421A3C /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		50EE401E26324A26003F4247 /* SwiftCatsMocked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCatsMocked.swift; sourceTree = "<group>"; };
 		B882EF9A2436AC2C00421A3C /* SwiftCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B882EF9D2436AC2D00421A3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B882EF9F2436AC2D00421A3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			children = (
 				B882EFB42436AC2F00421A3C /* SwiftCatsTests.swift */,
 				B882EFB62436AC2F00421A3C /* Info.plist */,
+				50EE401E26324A26003F4247 /* SwiftCatsMocked.swift */,
 			);
 			path = SwiftCatsTests;
 			sourceTree = "<group>";
@@ -163,7 +166,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Yilei He";
 				TargetAttributes = {
 					B882EF992436AC2C00421A3C = {
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B882EFB52436AC2F00421A3C /* SwiftCatsTests.swift in Sources */,
+				50EE401F26324A26003F4247 /* SwiftCatsMocked.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +296,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -352,6 +357,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

@@ -12,5 +12,9 @@ struct Owner: Decodable {
     let name: String
     let gender: String
     let age: Int
-    let pets: [Pet]?    // aa: Fixed. Handling nil.
+//    let pets: [Pet]?    // aa: Fixed. Handling nil.
+    let pets: Pets?         // aa: Use typealias instead.
 }
+
+typealias Owners = [Owner]  // aa: For convenient usage and readability
+typealias Pets = [Pet]      // aa: For convenient usage and readability
