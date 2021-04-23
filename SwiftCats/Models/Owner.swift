@@ -12,5 +12,5 @@ struct Owner: Decodable {
     let name: String
     let gender: String
     let age: Int
-    let pets: [Pet]
+    let pets: [Pet]?    // aa: Fixed. Handling nil.
 }
