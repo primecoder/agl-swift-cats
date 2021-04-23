@@ -3,7 +3,7 @@
 //  SwiftCatsTests
 //
 //  Created by Ace Authors on 23/4/21.
-//  Copyright © 2021 Yilei He. All rights reserved.
+//
 
 import XCTest
 @testable import SwiftCats

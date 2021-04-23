@@ -16,9 +16,12 @@ struct Owner: Decodable {
     let pets: Pets?         // aa: Use typealias instead.
 }
 
+// MARK: - Extension by Ace Authors, 2021.04.23 -
+
 typealias Owners = [Owner]  // aa: For convenient usage and readability
 typealias Pets = [Pet]      // aa: For convenient usage and readability
 
+/// Extension to Owners type with search capabilities.
 extension Owners {
     
     /// Returns all genders found.

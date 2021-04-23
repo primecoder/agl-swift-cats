@@ -4,8 +4,7 @@
 //
 //  AGL Challenge Project
 //
-//  Created by Yilei He on 3/4/20.
-//  Copyright © 2020 Yilei He. All rights reserved.
+//  Created by Ace Authors on 2021.04.23
 //
 
 import XCTest
@@ -13,8 +12,8 @@ import XCTest
 
 class SwiftCatsTests: XCTestCase {
 
-    override func setUp() { /* nothing here */ }
-    override func tearDown() { /* nothing here */ }
+    override func setUp() { }
+    override func tearDown() { }
 
     /// Test mocked data set that they are there.
     func testVerifyMockedData() {
