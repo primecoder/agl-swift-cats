@@ -100,7 +100,7 @@ struct TestData {
     "age": 200,
     "pets": [
       {
-        "name": "Drago-kling",
+        "name": "Drago-klingo Cat",
         "type": "Cat"
       }
     ]

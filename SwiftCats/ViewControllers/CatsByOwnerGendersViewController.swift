@@ -41,7 +41,7 @@ class CatsByOwnerGendersViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         // Bind table view to the four sides of parent.
-        tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 120).isActive = true
+        tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 80).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
@@ -69,6 +69,7 @@ class CatsByOwnerGendersViewController: UIViewController {
     }
     
     /// Return string appropriate for section header of a table.
+    /// In this case, the first letter is capitalised.
     private func formatSectionName(_ name: String) -> String {
         let firstCapStr =  (name.prefix(1).capitalized + name.dropFirst())
         return "Cats owned by: \(firstCapStr)"

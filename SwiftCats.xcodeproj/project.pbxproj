@@ -75,6 +75,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50EE4030263439BA003F4247 /* SwiftUIView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SwiftUIView;
+			sourceTree = "<group>";
+		};
+		50EE4031263439D5003F4247 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B882EFA12436AC2D00421A3C /* ViewController.swift */,
+				50EE402C263429B7003F4247 /* TabViewController.swift */,
+				5C6F86832633BA6200691721 /* CatsByOwnerGendersViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		5C6F86702632D36000691721 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,13 +125,12 @@
 			children = (
 				B882EF9D2436AC2D00421A3C /* AppDelegate.swift */,
 				B882EF9F2436AC2D00421A3C /* SceneDelegate.swift */,
-				B882EFA12436AC2D00421A3C /* ViewController.swift */,
-				50EE402C263429B7003F4247 /* TabViewController.swift */,
-				5C6F86832633BA6200691721 /* CatsByOwnerGendersViewController.swift */,
 				B882EFA62436AC2F00421A3C /* Assets.xcassets */,
 				B882EFA82436AC2F00421A3C /* LaunchScreen.storyboard */,
 				B882EFAB2436AC2F00421A3C /* Info.plist */,
 				B882EFBF2436AC4500421A3C /* NetworkService.swift */,
+				50EE4031263439D5003F4247 /* ViewControllers */,
+				50EE4030263439BA003F4247 /* SwiftUIView */,
 				B882EFC12436AE6C00421A3C /* Models */,
 				5C6F86702632D36000691721 /* ViewModels */,
 			);
