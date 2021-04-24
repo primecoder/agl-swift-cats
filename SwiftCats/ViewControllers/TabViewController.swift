@@ -18,26 +18,35 @@ class TabViewController: UITabBarController {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
         let viewModel = CatsByOwnerGendersViewModel(owners: appDelegate.owners)
+        
         let catsByOwnerGendersViewController = CatsByOwnerGendersViewController(viewModel: viewModel)
-        catsByOwnerGendersViewController.tabBarItem = UITabBarItem(title: "UIKit Demo",
-                                                                   image: UIImage(systemName: "rectangle.stack.person.crop"),
-                                                                   selectedImage: UIImage(systemName: "rectangle.stack.person.crop.fill"))
-
-        let swiftUICatsVC = UIHostingController(rootView: Text("SwiftUI Cats - TBD"))
-        swiftUICatsVC.tabBarItem = UITabBarItem(title: "SwiftUI/Combine Demo",
-                                                image: UIImage(systemName: "person.2.square.stack"),
-                                                selectedImage: UIImage(systemName: "person.2.square.stack.fill"))
+        catsByOwnerGendersViewController.tabBarItem = UITabBarItem(
+            title: "UIKit Demo",
+            image: UIImage(systemName: "rectangle.stack.person.crop"),
+            selectedImage: UIImage(systemName: "rectangle.stack.person.crop.fill")
+        )
+        
+        let swiftUICatsVC = UIHostingController(rootView: CatsByOwnerGendersView(viewModel: viewModel))
+        swiftUICatsVC.tabBarItem = UITabBarItem(
+            title: "SwiftUI/Combine Demo",
+            image: UIImage(systemName: "person.2.square.stack"),
+            selectedImage: UIImage(systemName: "person.2.square.stack.fill")
+        )
         
         let infoVC = UIHostingController(rootView: Text("Information page - TBD"))
-        infoVC.tabBarItem = UITabBarItem(title: "README",
-                                         image: UIImage(systemName: "info.circle"),
-                                         selectedImage: UIImage(systemName: "info.circle.fill"))
+        infoVC.tabBarItem = UITabBarItem(
+            title: "README",
+            image: UIImage(systemName: "info.circle"),
+            selectedImage: UIImage(systemName: "info.circle.fill")
+        )
         
         self.viewControllers = [
             catsByOwnerGendersViewController,
             swiftUICatsVC,
             infoVC
         ]
+        
+        self.selectedIndex = 1
     }
     
 }

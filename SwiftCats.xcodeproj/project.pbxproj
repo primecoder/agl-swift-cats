@@ -10,10 +10,11 @@
 		50EE401F26324A26003F4247 /* SwiftCatsMocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE401E26324A26003F4247 /* SwiftCatsMocked.swift */; };
 		50EE402726328549003F4247 /* ModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE402626328549003F4247 /* ModelsTests.swift */; };
 		50EE402D263429B7003F4247 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE402C263429B7003F4247 /* TabViewController.swift */; };
+		50EE403326343ABE003F4247 /* CatsByOwnerGendersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE403226343ABE003F4247 /* CatsByOwnerGendersView.swift */; };
+		50EE405F26343DE0003F4247 /* SwiftCatsMocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE401E26324A26003F4247 /* SwiftCatsMocked.swift */; };
 		5C6F86742632D4AB00691721 /* CatsByOwnerGendersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6F86732632D4AB00691721 /* CatsByOwnerGendersViewModel.swift */; };
 		5C6F867A26339C5E00691721 /* TestCatsByOwnerGendersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6F867926339C5E00691721 /* TestCatsByOwnerGendersViewModel.swift */; };
 		5C6F86842633BA6200691721 /* CatsByOwnerGendersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6F86832633BA6200691721 /* CatsByOwnerGendersViewController.swift */; };
-		5C6F86892633E2F400691721 /* SwiftCatsMocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE401E26324A26003F4247 /* SwiftCatsMocked.swift */; };
 		B882EF9E2436AC2D00421A3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B882EF9D2436AC2D00421A3C /* AppDelegate.swift */; };
 		B882EFA02436AC2D00421A3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B882EF9F2436AC2D00421A3C /* SceneDelegate.swift */; };
 		B882EFA22436AC2D00421A3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B882EFA12436AC2D00421A3C /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 		50EE401E26324A26003F4247 /* SwiftCatsMocked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCatsMocked.swift; sourceTree = "<group>"; };
 		50EE402626328549003F4247 /* ModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsTests.swift; sourceTree = "<group>"; };
 		50EE402C263429B7003F4247 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		50EE403226343ABE003F4247 /* CatsByOwnerGendersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsByOwnerGendersView.swift; sourceTree = "<group>"; };
 		5C6F86732632D4AB00691721 /* CatsByOwnerGendersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsByOwnerGendersViewModel.swift; sourceTree = "<group>"; };
 		5C6F867926339C5E00691721 /* TestCatsByOwnerGendersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCatsByOwnerGendersViewModel.swift; sourceTree = "<group>"; };
 		5C6F86832633BA6200691721 /* CatsByOwnerGendersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsByOwnerGendersViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		50EE4030263439BA003F4247 /* SwiftUIView */ = {
 			isa = PBXGroup;
 			children = (
+				50EE403226343ABE003F4247 /* CatsByOwnerGendersView.swift */,
 			);
 			path = SwiftUIView;
 			sourceTree = "<group>";
@@ -260,12 +263,13 @@
 			files = (
 				B882EFA22436AC2D00421A3C /* ViewController.swift in Sources */,
 				5C6F86842633BA6200691721 /* CatsByOwnerGendersViewController.swift in Sources */,
-				5C6F86892633E2F400691721 /* SwiftCatsMocked.swift in Sources */,
 				5C6F86742632D4AB00691721 /* CatsByOwnerGendersViewModel.swift in Sources */,
+				50EE403326343ABE003F4247 /* CatsByOwnerGendersView.swift in Sources */,
 				B882EF9E2436AC2D00421A3C /* AppDelegate.swift in Sources */,
 				B882EFC02436AC4500421A3C /* NetworkService.swift in Sources */,
 				B882EFC32436AE7800421A3C /* Owner.swift in Sources */,
 				B882EFA02436AC2D00421A3C /* SceneDelegate.swift in Sources */,
+				50EE405F26343DE0003F4247 /* SwiftCatsMocked.swift in Sources */,
 				50EE402D263429B7003F4247 /* TabViewController.swift in Sources */,
 				B882EFC52436AF4800421A3C /* Pet.swift in Sources */,
 			);
@@ -355,13 +359,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -410,12 +415,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
