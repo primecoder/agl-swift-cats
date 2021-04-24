@@ -33,8 +33,9 @@ class TestCatsByOwnerGendersViewModel: XCTestCase {
                              "View Model must contain data for at least 1 gender")
         for gender in vm.ownerGendersAndCats.keys {
             if let pets = vm.ownerGendersAndCats[gender] {
-                _ = pets.map { XCTAssertEqual($0.type.lowercased(),
-                                              "cat", "Pet must be a cat") }
+                _ = pets.map {
+                    XCTAssertEqual($0.type.lowercased(), "cat", "Pet must be a cat")
+                }
             }
         }
     }
