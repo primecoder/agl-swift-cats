@@ -9,7 +9,8 @@ import UIKit
 
 class CatsByOwnerGendersViewController: UIViewController {
     
-    let vm: CatsByOwnerGendersViewModel
+    // TODO: continue here
+//    let vm: CatsByOwnerGendersViewModel
     
     let tableView = UITableView()
 

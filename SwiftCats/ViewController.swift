@@ -8,6 +8,7 @@
 
 import UIKit
 
+// NOTE: This file is unused in this project and kept here for references purposes.
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
