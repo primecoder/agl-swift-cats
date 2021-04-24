@@ -15,6 +15,7 @@
 		5C6F86742632D4AB00691721 /* CatsByOwnerGendersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6F86732632D4AB00691721 /* CatsByOwnerGendersViewModel.swift */; };
 		5C6F867A26339C5E00691721 /* TestCatsByOwnerGendersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6F867926339C5E00691721 /* TestCatsByOwnerGendersViewModel.swift */; };
 		5C6F86842633BA6200691721 /* CatsByOwnerGendersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6F86832633BA6200691721 /* CatsByOwnerGendersViewController.swift */; };
+		5C6F869026346C9000691721 /* String+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6F868F26346C9000691721 /* String+ext.swift */; };
 		B882EF9E2436AC2D00421A3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B882EF9D2436AC2D00421A3C /* AppDelegate.swift */; };
 		B882EFA02436AC2D00421A3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B882EF9F2436AC2D00421A3C /* SceneDelegate.swift */; };
 		B882EFA22436AC2D00421A3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B882EFA12436AC2D00421A3C /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 		5C6F86732632D4AB00691721 /* CatsByOwnerGendersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsByOwnerGendersViewModel.swift; sourceTree = "<group>"; };
 		5C6F867926339C5E00691721 /* TestCatsByOwnerGendersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCatsByOwnerGendersViewModel.swift; sourceTree = "<group>"; };
 		5C6F86832633BA6200691721 /* CatsByOwnerGendersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsByOwnerGendersViewController.swift; sourceTree = "<group>"; };
+		5C6F868F26346C9000691721 /* String+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ext.swift"; sourceTree = "<group>"; };
 		B882EF9A2436AC2C00421A3C /* SwiftCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B882EF9D2436AC2D00421A3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B882EF9F2436AC2D00421A3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		5C6F868E26346C6600691721 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5C6F868F26346C9000691721 /* String+ext.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		B882EF912436AC2C00421A3C = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +146,7 @@
 				50EE4030263439BA003F4247 /* SwiftUIView */,
 				B882EFC12436AE6C00421A3C /* Models */,
 				5C6F86702632D36000691721 /* ViewModels */,
+				5C6F868E26346C6600691721 /* Utils */,
 			);
 			path = SwiftCats;
 			sourceTree = "<group>";
@@ -271,6 +282,7 @@
 				B882EFA02436AC2D00421A3C /* SceneDelegate.swift in Sources */,
 				50EE405F26343DE0003F4247 /* SwiftCatsMocked.swift in Sources */,
 				50EE402D263429B7003F4247 /* TabViewController.swift in Sources */,
+				5C6F869026346C9000691721 /* String+ext.swift in Sources */,
 				B882EFC52436AF4800421A3C /* Pet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

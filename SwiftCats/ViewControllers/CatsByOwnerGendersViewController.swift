@@ -71,8 +71,7 @@ class CatsByOwnerGendersViewController: UIViewController {
     /// Return string appropriate for section header of a table.
     /// In this case, the first letter is capitalised.
     private func formatSectionName(_ name: String) -> String {
-        let firstCapStr =  (name.prefix(1).capitalized + name.dropFirst())
-        return "Cats owned by: \(firstCapStr)"
+        return "Cats owned by: \(name.firstCap)"
     }
 }
 
