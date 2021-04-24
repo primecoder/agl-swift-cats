@@ -18,14 +18,15 @@ struct Owner: Decodable {
 
 // MARK: - Extension by Ace Authors, 2021.04.23 -
 
-typealias Owners = [Owner]  // aa: For convenient usage and readability
-typealias Pets = [Pet]      // aa: For convenient usage and readability
+typealias Owners = [Owner]
+typealias Pets = [Pet]
+typealias Gender = String
 
 /// Extension to Owners type with search capabilities.
 extension Owners {
     
     /// Returns all genders found.
-    var genders: Set<String> { Set(self.map { $0.gender.lowercased() }) }
+    var genders: Set<Gender> { Set(self.map { $0.gender.lowercased() }) }
     
     /// Return all ages.
     var ages: Set<Int> { Set(self.map { $0.age }) }
