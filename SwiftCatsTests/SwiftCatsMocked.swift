@@ -93,6 +93,39 @@ struct TestData {
         "type": "Fish"
       }
     ]
+  },
+  {
+    "name": "Huss",
+    "gender": "Klingon",
+    "age": 200,
+    "pets": [
+      {
+        "name": "Drago-kling",
+        "type": "Cat"
+      }
+    ]
+  },
+  {
+    "name": "T-800",
+    "gender": "Terminator",
+    "age": 10,
+    "pets": [
+      {
+        "name": "Robocat",
+        "type": "Cat"
+      }
+    ]
+  },
+  {
+    "name": "T-1800",
+    "gender": "Terminator",
+    "age": 20,
+    "pets": [
+      {
+        "name": "Robo Pussy Cat",
+        "type": "Cat"
+      }
+    ]
   }
 ]
 """

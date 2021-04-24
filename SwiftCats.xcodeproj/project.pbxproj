@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		50EE401F26324A26003F4247 /* SwiftCatsMocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE401E26324A26003F4247 /* SwiftCatsMocked.swift */; };
 		50EE402726328549003F4247 /* ModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE402626328549003F4247 /* ModelsTests.swift */; };
+		50EE402D263429B7003F4247 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE402C263429B7003F4247 /* TabViewController.swift */; };
 		5C6F86742632D4AB00691721 /* CatsByOwnerGendersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6F86732632D4AB00691721 /* CatsByOwnerGendersViewModel.swift */; };
 		5C6F867A26339C5E00691721 /* TestCatsByOwnerGendersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6F867926339C5E00691721 /* TestCatsByOwnerGendersViewModel.swift */; };
 		5C6F86842633BA6200691721 /* CatsByOwnerGendersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6F86832633BA6200691721 /* CatsByOwnerGendersViewController.swift */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		50EE401E26324A26003F4247 /* SwiftCatsMocked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCatsMocked.swift; sourceTree = "<group>"; };
 		50EE402626328549003F4247 /* ModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsTests.swift; sourceTree = "<group>"; };
+		50EE402C263429B7003F4247 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		5C6F86732632D4AB00691721 /* CatsByOwnerGendersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsByOwnerGendersViewModel.swift; sourceTree = "<group>"; };
 		5C6F867926339C5E00691721 /* TestCatsByOwnerGendersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCatsByOwnerGendersViewModel.swift; sourceTree = "<group>"; };
 		5C6F86832633BA6200691721 /* CatsByOwnerGendersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsByOwnerGendersViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				B882EF9D2436AC2D00421A3C /* AppDelegate.swift */,
 				B882EF9F2436AC2D00421A3C /* SceneDelegate.swift */,
 				B882EFA12436AC2D00421A3C /* ViewController.swift */,
+				50EE402C263429B7003F4247 /* TabViewController.swift */,
 				5C6F86832633BA6200691721 /* CatsByOwnerGendersViewController.swift */,
 				B882EFA62436AC2F00421A3C /* Assets.xcassets */,
 				B882EFA82436AC2F00421A3C /* LaunchScreen.storyboard */,
@@ -247,6 +250,7 @@
 				B882EFC02436AC4500421A3C /* NetworkService.swift in Sources */,
 				B882EFC32436AE7800421A3C /* Owner.swift in Sources */,
 				B882EFA02436AC2D00421A3C /* SceneDelegate.swift in Sources */,
+				50EE402D263429B7003F4247 /* TabViewController.swift in Sources */,
 				B882EFC52436AF4800421A3C /* Pet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

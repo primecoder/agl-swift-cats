@@ -16,13 +16,12 @@ struct CatsByOwnerGendersViewModel {
     var ownerGendersAndCats: [Gender : Pets]
     
     /// Return genders found in the same order as in the dictionary counterpart.
-    var ownerGenders: [Gender] { Array(ownerGendersAndCats.keys) }
-        // Tech Note: Array(owners.genders) - Can't do this as order can change
-    
+    var ownerGenders: [Gender] { Array(ownerGendersAndCats.keys.sorted { $0 > $1 }) }
+
     init(owners: Owners) {
         self.owners = owners
         self.ownerGendersAndCats = [:]
-        for gender in (owners.genders.sorted { $1 < $0 }) {     // i.e. male first, then female
+        for gender in (owners.genders.sorted { $0 > $1 }) {     // i.e. male first, then female
             let pets = owners
                 .findPetsByOwner { $0.gender.lowercased() == gender }
                 .filter { $0.type.lowercased() == "cat" }

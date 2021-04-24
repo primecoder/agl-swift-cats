@@ -71,7 +71,7 @@ class CatsByOwnerGendersViewController: UIViewController {
     /// Return string appropriate for section header of a table.
     private func formatSectionName(_ name: String) -> String {
         let firstCapStr =  (name.prefix(1).capitalized + name.dropFirst())
-        return firstCapStr
+        return "Cats owned by: \(firstCapStr)"
     }
 }
 
@@ -105,7 +105,7 @@ extension CatsByOwnerGendersViewController: UITableViewDelegate {
         guard section < viewModel.ownerGenders.count else { return UILabel() }
         let sectionName = formatSectionName(viewModel.ownerGenders[section])
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.font = UIFont.boldSystemFont(ofSize: 18)
         label.textAlignment = .center
         label.text = sectionName
         return label
