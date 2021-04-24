@@ -11,7 +11,7 @@ class CatsByOwnerGendersViewController: UIViewController {
     
     let viewModel: CatsByOwnerGendersViewModel
     
-    let tableView = UITableView()
+    let tableView = UITableView(frame: CGRect.zero, style: .insetGrouped)
     
     init(viewModel: CatsByOwnerGendersViewModel) {
         self.viewModel = viewModel
@@ -29,47 +29,27 @@ class CatsByOwnerGendersViewController: UIViewController {
     override func loadView() {
         super.loadView()
         setupTableView()
+        self.view.backgroundColor = .secondarySystemBackground
     }
     
     private func setupTableView() {
         view.addSubview(tableView)
         
+        tableView.backgroundColor = .secondarySystemBackground
+
         // We will do the layout work ourselves.
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         // Bind table view to the four sides of parent.
-        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 120).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         
-        // Register view cell & setup datasource
+        // Register view cell & setup datasource & delegate
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "defaultCatViewCell")
         tableView.dataSource = self
-    }
-}
-
-extension CatsByOwnerGendersViewController: UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.ownerGenders.count
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        guard section < viewModel.ownerGenders.count else { return ("???") }
-        return viewModel.ownerGenders[section]
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard section < viewModel.ownerGenders.count else { return 0 }
-        let gender = viewModel.ownerGenders[section]
-        return viewModel.ownerGendersAndCats[gender]?.count ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCatViewCell", for: indexPath)
-        configure(cell: cell, at: indexPath)
-        return cell
+        tableView.delegate = self
     }
     
     private func configure(cell: UITableViewCell, at indexPath: IndexPath) {
@@ -85,11 +65,49 @@ extension CatsByOwnerGendersViewController: UITableViewDataSource {
             cell.textLabel?.text = "(invalid row)"
             return
         }
-        let catName = cats[indexPath.row].name
-        print("DEBUG > model: \(viewModel.ownerGendersAndCats)")
-        print("DEBUG > gender: \(gender)")
-        print("DEBUG > cats: \(cats)")
-        print("DEBUG > cat name: \(catName)")
         cell.textLabel?.text = cats[indexPath.row].name
+    }
+    
+    /// Return string appropriate for section header of a table.
+    private func formatSectionName(_ name: String) -> String {
+        let firstCapStr =  (name.prefix(1).capitalized + name.dropFirst())
+        return firstCapStr
+    }
+}
+
+// MARK: - Table View DataSource -
+
+extension CatsByOwnerGendersViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.ownerGenders.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard section < viewModel.ownerGenders.count else { return 0 }
+        let gender = viewModel.ownerGenders[section]
+        return viewModel.ownerGendersAndCats[gender]?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCatViewCell", for: indexPath)
+        configure(cell: cell, at: indexPath)
+        return cell
+    }
+    
+}
+
+// MARK: - Table View Delegate (Look-n-Feel) -
+
+extension CatsByOwnerGendersViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard section < viewModel.ownerGenders.count else { return UILabel() }
+        let sectionName = formatSectionName(viewModel.ownerGenders[section])
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.textAlignment = .center
+        label.text = sectionName
+        return label
     }
 }

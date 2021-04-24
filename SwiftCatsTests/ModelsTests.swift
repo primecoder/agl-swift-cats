@@ -32,7 +32,7 @@ class ModelsTests: XCTestCase {
         XCTAssertGreaterThan(owners.genders.count, 0, "There must be at least 1 gender")
         XCTAssertGreaterThan(owners.ages.count, 0, "There must be at least 1 age group")
         print("Genders: \(owners.genders)")
-        print("Ages: \(owners.ages.sorted { $0 < $1} )")
+        print("Ages: \(owners.ages.sorted { $0 < $1 } )")
     }
     
     func testFindCatsByOwnerGenders() throws {
