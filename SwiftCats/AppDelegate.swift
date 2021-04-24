@@ -11,25 +11,37 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    
+    var owners = Owners()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        setupAppDate()
+        
         return true
     }
     
     // MARK: UISceneSession Lifecycle
     
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
     
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    /// Setup application's data.
+    private func setupAppDate() {
+        
+        // TODO: use REAL data when done.
+        guard let data = TestData.catsAndOwners.data(using: .utf8) else {
+            print("WARNING > setupAppViewModel > data not available")
+            return
+        }
+        guard let owners = try? JSONDecoder().decode(Owners.self, from: data) else {
+            print("WARNING > setupAppViewModel > invalid data")
+            return
+        }
+        self.owners = owners
     }
     
     

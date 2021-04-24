@@ -15,6 +15,8 @@ struct CatsByOwnerGendersViewModel {
     /// A dictionary of genders to pets<cat>.
     var ownerGendersAndCats: [Gender : Pets]
     
+    var ownerGenders: [Gender] { Array(owners.genders) }
+    
     init(owners: Owners) {
         self.owners = owners
         self.ownerGendersAndCats = [:]
