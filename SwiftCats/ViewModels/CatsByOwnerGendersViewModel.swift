@@ -45,7 +45,7 @@ class CatsByOwnerGendersViewModel {
             DispatchQueue.global(qos: .default).async {
                 NetworkService().getOwners { self.setupDataModel(from: $0); group.leave() }
             }
-            group.wait()
+            _ = group.wait(timeout: .now() + 5)
         }
     }
     
