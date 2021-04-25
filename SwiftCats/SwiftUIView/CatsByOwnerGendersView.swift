@@ -44,7 +44,7 @@ struct CatsByOwnerGendersView: View {
         }
         .background(Color(UIColor.secondarySystemBackground))
         .onAppear {
-            if !runOnce {
+            if !runOnce {   // No need to re-run when switching b/w tabs
                 reloadData(for: self.dataSourceSelector)
                 runOnce = true
             }

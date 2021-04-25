@@ -40,8 +40,12 @@ class CatsByOwnerGendersViewModel {
         case .mockedService:
             MockedService().getOwners { self.setupDataModel(from: $0) }
         case .networkService:
-            NetworkService().getOwners { self.setupDataModel(from: $0) }
-            sleep(5)
+            let group = DispatchGroup()
+            group.enter()
+            DispatchQueue.global(qos: .default).async {
+                NetworkService().getOwners { self.setupDataModel(from: $0); group.leave() }
+            }
+            group.wait()
         }
     }
     
