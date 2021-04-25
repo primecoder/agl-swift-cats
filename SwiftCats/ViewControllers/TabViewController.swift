@@ -34,7 +34,7 @@ class TabViewController: UITabBarController {
             selectedImage: UIImage(systemName: "person.2.square.stack.fill")
         )
         
-        let infoVC = UIHostingController(rootView: Text("Information page - TBD"))
+        let infoVC = UIHostingController(rootView: SwiftCatReadMeView())
         infoVC.tabBarItem = UITabBarItem(
             title: "README",
             image: UIImage(systemName: "info.circle"),
@@ -47,7 +47,7 @@ class TabViewController: UITabBarController {
             infoVC
         ]
         
-        self.selectedIndex = 1
+        self.selectedIndex = 2
     }
     
 }
