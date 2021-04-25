@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct CatsByOwnerGendersView: View {
-    @State var viewModel = CatsByOwnerGendersViewModel(from: .mockedService)
     let humanGenders = [ "male", "female" ]
-
+    
+    @State private var runOnce = false
+    @State var viewModel = CatsByOwnerGendersViewModel(from: .mockedService)
     @State private var dataSourceSelector: Int = 0
     @State private var humanOnly = false
-    
+    @State var genders: [Gender] = []
+
     init(viewModel: CatsByOwnerGendersViewModel) {
         self.viewModel = viewModel
     }
@@ -24,7 +26,7 @@ struct CatsByOwnerGendersView: View {
             .padding()
         
         ScrollView {
-            ForEach(viewModel.ownerGenders, id: \.self) { gender in
+            ForEach(self.genders, id: \.self) { gender in
                 if (humanOnly) {
                     if humanGenders.contains(gender.lowercased()) {
                         CatsByGenderView(
@@ -41,15 +43,24 @@ struct CatsByOwnerGendersView: View {
             }
         }
         .background(Color(UIColor.secondarySystemBackground))
-        .onChange(of: dataSourceSelector, perform: { value in
-            self.humanOnly = false      // Reset everytime datasource changes
-            switch value {
-            case 1:
-                self.viewModel.datasource = .networkService
-            default:
-                self.viewModel.datasource = .mockedService
+        .onAppear {
+            if !runOnce {
+                reloadData(for: self.dataSourceSelector)
+                runOnce = true
             }
-        })
+        }
+        .onChange(of: dataSourceSelector) { reloadData(for: $0) }
+    }
+    
+    private func reloadData(for selector: Int) {
+        switch selector {
+        case 1:
+            self.viewModel.datasource = .networkService
+        default:
+            self.viewModel.datasource = .mockedService
+        }
+        self.humanOnly = false      // Reset everytime datasource changes
+        self.genders = self.viewModel.ownerGenders
     }
     
     @ViewBuilder
