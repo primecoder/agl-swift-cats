@@ -10,6 +10,7 @@ import SwiftUI
 struct CatsByOwnerGendersView: View {
     let humanGenders = [ "male", "female" ]
     
+    @State private var showWaitingView = true
     @State private var runOnce = false
     @State var viewModel = CatsByOwnerGendersViewModel(from: .mockedService)
     @State private var dataSourceSelector: Int = 0
@@ -21,10 +22,29 @@ struct CatsByOwnerGendersView: View {
     }
     
     var body: some View {
-        
+        ZStack {
+            mainView()
+            loadingView(isShowing: showWaitingView)
+        }
+    }
+    
+    private func reloadData(for selector: Int) {
+        switch selector {
+        case 1:
+            self.viewModel.datasource = .networkService
+        default:
+            self.viewModel.datasource = .mockedService
+        }
+        self.humanOnly = false      // Reset everytime datasource changes
+        self.genders = self.viewModel.ownerGenders
+    }
+    
+    @ViewBuilder
+    func mainView() -> some View {
+        VStack {
         configurationPanel()
             .padding()
-        
+
         ScrollView {
             ForEach(self.genders, id: \.self) { gender in
                 if (humanOnly) {
@@ -45,22 +65,34 @@ struct CatsByOwnerGendersView: View {
         .background(Color(UIColor.secondarySystemBackground))
         .onAppear {
             if !runOnce {   // No need to re-run when switching b/w tabs
-                reloadData(for: self.dataSourceSelector)
+                showWaitingView = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    reloadData(for: self.dataSourceSelector)
+                    showWaitingView = false
+                }
                 runOnce = true
             }
         }
-        .onChange(of: dataSourceSelector) { reloadData(for: $0) }
+        .onChange(of: dataSourceSelector) { value in
+            showWaitingView = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                reloadData(for: value)
+                showWaitingView = false
+            }
+        }
+        }
     }
     
-    private func reloadData(for selector: Int) {
-        switch selector {
-        case 1:
-            self.viewModel.datasource = .networkService
-        default:
-            self.viewModel.datasource = .mockedService
+    @ViewBuilder
+    func loadingView(isShowing: Bool) -> some View {
+        if isShowing {
+            Text("Loading. Please wait ...")
+                .foregroundColor(.white)
+                .font(.largeTitle)
+                .bold()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color.black.opacity(0.8))
         }
-        self.humanOnly = false      // Reset everytime datasource changes
-        self.genders = self.viewModel.ownerGenders
     }
     
     @ViewBuilder
