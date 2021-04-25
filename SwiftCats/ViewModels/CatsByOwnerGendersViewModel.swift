@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 /// View Model that presents lists of cats by owners' genders.
 class CatsByOwnerGendersViewModel {
@@ -13,14 +14,18 @@ class CatsByOwnerGendersViewModel {
     enum DataSource {
         case mockedService
         case networkService
+        case combineService
     }
+    
+    let catsAndOwnersService = CatsAndOwnersCombineService()
+    private var cancellable: AnyCancellable? = nil
     
     var datasource: DataSource { didSet { loadData() } }
     
     private var owners: Owners = []
     
     /// A dictionary of genders to pets<cat>.
-    var ownerGendersAndCats: [Gender : Pets] = [:]
+    @Published var ownerGendersAndCats: [Gender : Pets] = [:]
     
     /// Convenient property that returns all genders found.
     var ownerGenders: [Gender] { Array(ownerGendersAndCats.keys.sorted { $0 > $1 }) }
@@ -46,6 +51,9 @@ class CatsByOwnerGendersViewModel {
                 NetworkService().getOwners { self.setupDataModel(from: $0); group.leave() }
             }
             _ = group.wait(timeout: .now() + 5)
+        case .combineService:
+            catsAndOwnersService.refetchData()
+            cancellable = catsAndOwnersService.$owners.sink { self.setupDataModel(from: $0) }
         }
     }
     
@@ -55,7 +63,7 @@ class CatsByOwnerGendersViewModel {
             let pets = owners
                 .findPetsByOwner { $0.gender.lowercased() == gender }
                 .filter { $0.type.lowercased() == "cat" }
-                .sorted { $0.name < $1.name }
+                .sorted { $0.name < $1.name }                   // Sort by pet's name
             self.ownerGendersAndCats[gender] = pets
         }
     }

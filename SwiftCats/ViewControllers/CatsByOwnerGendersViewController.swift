@@ -25,6 +25,11 @@ class CatsByOwnerGendersViewController: UIViewController {
     // Used when loading view from storyboard/interface builder.
     override func viewDidLoad() { super.viewDidLoad() }
     
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.loadData()
+        tableView.reloadData()
+    }
+    
     // Use this instead when adding view programmatically.
     override func loadView() {
         super.loadView()

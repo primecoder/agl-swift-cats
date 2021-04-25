@@ -55,6 +55,12 @@ class SwiftCatsTests: XCTestCase {
         wait(for: [expectation], timeout: 5)
     }
     
+    func testVerifyCatsAndOwnersCombineService() {
+        let service = CatsAndOwnersCombineService(on: DispatchQueue.global())
+        sleep(5)
+        _ = service.owners.map { self.verifyOwnerIntegrity(owner: $0) }
+    }
+    
     /// Verify that owner object contains correct properties.
     /// This function, when passes, return nothing, otherwise it fails with XCTFail.
     func verifyOwnerIntegrity(owner: Owner) {

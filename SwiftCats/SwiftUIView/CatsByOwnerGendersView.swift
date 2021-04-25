@@ -23,15 +23,19 @@ struct CatsByOwnerGendersView: View {
     
     var body: some View {
         ZStack {
-            mainView()
+            mainView(genders: genders)
             loadingView(isShowing: showWaitingView)
         }
     }
     
     private func reloadData(for selector: Int) {
         switch selector {
+        case 0:
+            self.viewModel.datasource = .mockedService
         case 1:
             self.viewModel.datasource = .networkService
+        case 2:
+            self.viewModel.datasource = .combineService
         default:
             self.viewModel.datasource = .mockedService
         }
@@ -40,13 +44,13 @@ struct CatsByOwnerGendersView: View {
     }
     
     @ViewBuilder
-    func mainView() -> some View {
+    func mainView(genders: [Gender]) -> some View {
         VStack {
         configurationPanel()
             .padding()
 
         ScrollView {
-            ForEach(self.genders, id: \.self) { gender in
+            ForEach(genders, id: \.self) { gender in
                 if (humanOnly) {
                     if humanGenders.contains(gender.lowercased()) {
                         CatsByGenderView(
@@ -111,6 +115,7 @@ struct CatsByOwnerGendersView: View {
             Picker("Datasource:", selection: $dataSourceSelector) {
                 Text("Local").tag(0)
                 Text("Remote").tag(1)
+                Text("Combine").tag(2)
             }
             .pickerStyle(SegmentedPickerStyle())
         }
