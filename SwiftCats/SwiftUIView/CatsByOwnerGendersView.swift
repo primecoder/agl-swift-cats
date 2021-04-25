@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CatsByOwnerGendersView: View {
-    let viewModel: CatsByOwnerGendersViewModel
+    @State var viewModel = CatsByOwnerGendersViewModel(from: .mockedService)
     let humanGenders = [ "male", "female" ]
 
     @State private var dataSourceSelector: Int = 0
@@ -41,6 +41,15 @@ struct CatsByOwnerGendersView: View {
             }
         }
         .background(Color(UIColor.secondarySystemBackground))
+        .onChange(of: dataSourceSelector, perform: { value in
+            self.humanOnly = false      // Reset everytime datasource changes
+            switch value {
+            case 1:
+                self.viewModel.datasource = .networkService
+            default:
+                self.viewModel.datasource = .mockedService
+            }
+        })
     }
     
     @ViewBuilder

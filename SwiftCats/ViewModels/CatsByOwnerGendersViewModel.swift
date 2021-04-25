@@ -8,19 +8,45 @@
 import Foundation
 
 /// View Model that presents lists of cats by owners' genders.
-struct CatsByOwnerGendersViewModel {
+class CatsByOwnerGendersViewModel {
     
-    private let owners: Owners
+    enum DataSource {
+        case mockedService
+        case networkService
+    }
+    
+    var datasource: DataSource { didSet { loadData() } }
+    
+    private var owners: Owners = []
     
     /// A dictionary of genders to pets<cat>.
-    var ownerGendersAndCats: [Gender : Pets]
+    var ownerGendersAndCats: [Gender : Pets] = [:]
     
     /// Convenient property that returns all genders found.
     var ownerGenders: [Gender] { Array(ownerGendersAndCats.keys.sorted { $0 > $1 }) }
 
-    init(owners: Owners) {
-        self.owners = owners
+    init(from datasource: DataSource = .mockedService) {
+        self.datasource = datasource
+        loadData()
+    }
+    
+    func loadData() {
+        print("DEBUG > loadData from: \(datasource)")
+        
+        self.owners = []
         self.ownerGendersAndCats = [:]
+        
+        switch datasource {
+        case .mockedService:
+            MockedService().getOwners { self.setupDataModel(from: $0) }
+        case .networkService:
+            NetworkService().getOwners { self.setupDataModel(from: $0) }
+            sleep(5)
+        }
+    }
+    
+    private func setupDataModel(from owners: Owners) {
+        self.owners = owners
         for gender in (owners.genders.sorted { $0 > $1 }) {     // i.e. male first, then female
             let pets = owners
                 .findPetsByOwner { $0.gender.lowercased() == gender }
@@ -29,4 +55,6 @@ struct CatsByOwnerGendersViewModel {
             self.ownerGendersAndCats[gender] = pets
         }
     }
+    
+    
 }

@@ -11,12 +11,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var owners = Owners()
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        setupAppDate()
-        
         return true
     }
     
@@ -28,16 +23,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
     }
-    
-    /// Setup application's data.
-    private func setupAppDate() {
-        
-        MockedService().getOwners { self.owners = $0 }
-//        NetworkService().getOwners { self.owners = $0 }
-        
-        sleep(5)
-        print("DEBUG > results: \(self.owners)")
-    }
-    
-    
+
 }

@@ -20,7 +20,7 @@ class TestCatsByOwnerGendersViewModel: XCTestCase {
 
     /// Test: view model contains data and each item is correct pet's type - cat.
     func testCatsByOwnerGendersViewModel() throws {
-        let vm = CatsByOwnerGendersViewModel(owners: owners)
+        let vm = CatsByOwnerGendersViewModel(from: .mockedService)
         XCTAssertGreaterThan(vm.ownerGendersAndCats.count, 0,
                              "View Model must contain data for at least 1 gender")
         for gender in vm.ownerGendersAndCats.keys {
