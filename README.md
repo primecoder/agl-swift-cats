@@ -50,7 +50,7 @@ Welcome to Swift Cat Programing Challenge. This is part of Programming Challenge
 
 This application was designed and developed using MVVM Design Pattern.
 
-![](doc/res/swiftcat-arch.png)
+![](doc/res/SwiftCat-arch.png)
 
 ## Code Organisation
 
