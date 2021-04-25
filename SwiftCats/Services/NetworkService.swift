@@ -18,3 +18,4 @@ final class NetworkService {
         }.resume()
     }
 }
+

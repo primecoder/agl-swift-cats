@@ -12,6 +12,7 @@
 		50EE402D263429B7003F4247 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE402C263429B7003F4247 /* TabViewController.swift */; };
 		50EE403326343ABE003F4247 /* CatsByOwnerGendersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE403226343ABE003F4247 /* CatsByOwnerGendersView.swift */; };
 		50EE405F26343DE0003F4247 /* SwiftCatsMocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE401E26324A26003F4247 /* SwiftCatsMocked.swift */; };
+		50EE406A2634ECC4003F4247 /* MockedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE40692634ECC4003F4247 /* MockedService.swift */; };
 		5C6F86742632D4AB00691721 /* CatsByOwnerGendersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6F86732632D4AB00691721 /* CatsByOwnerGendersViewModel.swift */; };
 		5C6F867A26339C5E00691721 /* TestCatsByOwnerGendersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6F867926339C5E00691721 /* TestCatsByOwnerGendersViewModel.swift */; };
 		5C6F86842633BA6200691721 /* CatsByOwnerGendersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6F86832633BA6200691721 /* CatsByOwnerGendersViewController.swift */; };
@@ -42,6 +43,7 @@
 		50EE402626328549003F4247 /* ModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsTests.swift; sourceTree = "<group>"; };
 		50EE402C263429B7003F4247 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		50EE403226343ABE003F4247 /* CatsByOwnerGendersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsByOwnerGendersView.swift; sourceTree = "<group>"; };
+		50EE40692634ECC4003F4247 /* MockedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedService.swift; sourceTree = "<group>"; };
 		5C6F86732632D4AB00691721 /* CatsByOwnerGendersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsByOwnerGendersViewModel.swift; sourceTree = "<group>"; };
 		5C6F867926339C5E00691721 /* TestCatsByOwnerGendersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCatsByOwnerGendersViewModel.swift; sourceTree = "<group>"; };
 		5C6F86832633BA6200691721 /* CatsByOwnerGendersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsByOwnerGendersViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,15 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		50EE40662634EA76003F4247 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B882EFBF2436AC4500421A3C /* NetworkService.swift */,
+				50EE40692634ECC4003F4247 /* MockedService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		5C6F86702632D36000691721 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,7 +152,7 @@
 				B882EFA62436AC2F00421A3C /* Assets.xcassets */,
 				B882EFA82436AC2F00421A3C /* LaunchScreen.storyboard */,
 				B882EFAB2436AC2F00421A3C /* Info.plist */,
-				B882EFBF2436AC4500421A3C /* NetworkService.swift */,
+				50EE40662634EA76003F4247 /* Services */,
 				50EE4031263439D5003F4247 /* ViewControllers */,
 				50EE4030263439BA003F4247 /* SwiftUIView */,
 				B882EFC12436AE6C00421A3C /* Models */,
@@ -278,6 +289,7 @@
 				50EE403326343ABE003F4247 /* CatsByOwnerGendersView.swift in Sources */,
 				B882EF9E2436AC2D00421A3C /* AppDelegate.swift in Sources */,
 				B882EFC02436AC4500421A3C /* NetworkService.swift in Sources */,
+				50EE406A2634ECC4003F4247 /* MockedService.swift in Sources */,
 				B882EFC32436AE7800421A3C /* Owner.swift in Sources */,
 				B882EFA02436AC2D00421A3C /* SceneDelegate.swift in Sources */,
 				50EE405F26343DE0003F4247 /* SwiftCatsMocked.swift in Sources */,

@@ -15,7 +15,7 @@ struct CatsByOwnerGendersViewModel {
     /// A dictionary of genders to pets<cat>.
     var ownerGendersAndCats: [Gender : Pets]
     
-    /// Return genders found in the same order as in the dictionary counterpart.
+    /// Convenient property that returns all genders found.
     var ownerGenders: [Gender] { Array(ownerGendersAndCats.keys.sorted { $0 > $1 }) }
 
     init(owners: Owners) {

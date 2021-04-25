@@ -32,18 +32,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /// Setup application's data.
     private func setupAppDate() {
         
-        // TODO: use REAL data when done.
-        guard let data = TestData.catsAndOwners.data(using: .utf8) else {
-            print("WARNING > setupAppViewModel > data not available")
-            return
-        }
-        guard let owners = try? JSONDecoder().decode(Owners.self, from: data) else {
-            print("WARNING > setupAppViewModel > invalid data")
-            return
-        }
-        self.owners = owners
+        MockedService().getOwners { self.owners = $0 }
+//        NetworkService().getOwners { self.owners = $0 }
+        
+        sleep(5)
+        print("DEBUG > results: \(self.owners)")
     }
     
     
 }
-

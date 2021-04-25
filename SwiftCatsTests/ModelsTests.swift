@@ -14,15 +14,7 @@ class ModelsTests: XCTestCase {
     var owners = Owners()
     
     override func setUpWithError() throws {
-        guard let data = TestData.catsAndOwners.data(using: .utf8) else {
-            XCTFail("Mocked test data invalid or unavailable")
-            return
-        }
-        guard let owners = try? JSONDecoder().decode(Owners.self, from: data) else {
-            XCTFail("Unable to decode json data")
-            return
-        }
-        self.owners = owners
+        MockedService().getOwners { self.owners = $0 }
     }
 
     override func tearDownWithError() throws { }

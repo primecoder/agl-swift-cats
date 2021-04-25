@@ -46,6 +46,15 @@ class SwiftCatsTests: XCTestCase {
         wait(for: [expectation], timeout: 5)
     }
     
+    func testVerifyMockedService() {
+        let expectation = XCTestExpectation(description: "Mocked data is available")
+        MockedService().getOwners {
+            _ = $0.map { self.verifyOwnerIntegrity(owner: $0)}
+            expectation.fulfill()       // Fulfilled if we reach here.
+        }
+        wait(for: [expectation], timeout: 5)
+    }
+    
     /// Verify that owner object contains correct properties.
     /// This function, when passes, return nothing, otherwise it fails with XCTFail.
     func verifyOwnerIntegrity(owner: Owner) {
