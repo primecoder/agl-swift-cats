@@ -98,3 +98,10 @@ This application was designed and developed using MVVM Design Pattern.
 - [README - Original](README-original.md)
 
 - [Easter Challenge](https://github.com/primecoder/easter-2021-challenge)
+
+## Thank You
+
+Thank you for visiting my page.
+
+Ace Authors
+2021.04.25
