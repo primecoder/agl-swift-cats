@@ -17,7 +17,7 @@ struct SwiftCatReadMeView: View {
         😸 SwiftUI/Combine Demo:
         Demonstrate using SwiftUI + Combine framework
         - Switching between datasources: local/remote
-        - Using Combine Framework
+        - Or using Combine Framework (remote)
         - Simple filter functionality (human only)
         - Simple errors handling (network errors)
     """
@@ -27,7 +27,7 @@ struct SwiftCatReadMeView: View {
         - Mixed UIKit/SwiftUI/Combine Framework
         - Object Serialisation (JSON/Decoding)
         - Model-View-ViewModel (MVVM) pattern
-        - Unit test and UI Automation Test, Code Coverage +86%
+        - Unit test and UI Automation Test, Code Coverage +94%
         - iOS 14+ (support both iPhones/iPads)
         - Autolayout (landscape/portrait)
         - Swift 5.3
@@ -43,7 +43,7 @@ struct SwiftCatReadMeView: View {
             VStack {
                 Image("cat")
                 Text("Swift Cat").bold().font(.title)
-                Text("by Ace")
+                Text(" ")
                 Divider()
                 VStack(alignment: .leading) {
                     Text(uikitInfo)

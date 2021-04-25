@@ -15,6 +15,7 @@
 		50EE406A2634ECC4003F4247 /* MockedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE40692634ECC4003F4247 /* MockedService.swift */; };
 		50EE407226351B42003F4247 /* CatsAndOwnersCombineService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE407126351B42003F4247 /* CatsAndOwnersCombineService.swift */; };
 		50EE408026353CED003F4247 /* SwiftCatReadMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE407F26353CED003F4247 /* SwiftCatReadMeView.swift */; };
+		50EE408A263545EE003F4247 /* SwiftCatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE4089263545EE003F4247 /* SwiftCatsUITests.swift */; };
 		5C6F86742632D4AB00691721 /* CatsByOwnerGendersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6F86732632D4AB00691721 /* CatsByOwnerGendersViewModel.swift */; };
 		5C6F867A26339C5E00691721 /* TestCatsByOwnerGendersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6F867926339C5E00691721 /* TestCatsByOwnerGendersViewModel.swift */; };
 		5C6F86842633BA6200691721 /* CatsByOwnerGendersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6F86832633BA6200691721 /* CatsByOwnerGendersViewController.swift */; };
@@ -30,6 +31,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		50EE408C263545EE003F4247 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B882EF922436AC2C00421A3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B882EF992436AC2C00421A3C;
+			remoteInfo = SwiftCats;
+		};
 		B882EFB12436AC2F00421A3C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B882EF922436AC2C00421A3C /* Project object */;
@@ -47,6 +55,9 @@
 		50EE40692634ECC4003F4247 /* MockedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedService.swift; sourceTree = "<group>"; };
 		50EE407126351B42003F4247 /* CatsAndOwnersCombineService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsAndOwnersCombineService.swift; sourceTree = "<group>"; };
 		50EE407F26353CED003F4247 /* SwiftCatReadMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCatReadMeView.swift; sourceTree = "<group>"; };
+		50EE4087263545EE003F4247 /* SwiftCatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftCatsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50EE4089263545EE003F4247 /* SwiftCatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCatsUITests.swift; sourceTree = "<group>"; };
+		50EE408B263545EE003F4247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C6F86732632D4AB00691721 /* CatsByOwnerGendersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsByOwnerGendersViewModel.swift; sourceTree = "<group>"; };
 		5C6F867926339C5E00691721 /* TestCatsByOwnerGendersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCatsByOwnerGendersViewModel.swift; sourceTree = "<group>"; };
 		5C6F86832633BA6200691721 /* CatsByOwnerGendersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsByOwnerGendersViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +77,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		50EE4084263545EE003F4247 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B882EF972436AC2C00421A3C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -111,6 +129,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		50EE4088263545EE003F4247 /* SwiftCatsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				50EE4089263545EE003F4247 /* SwiftCatsUITests.swift */,
+				50EE408B263545EE003F4247 /* Info.plist */,
+			);
+			path = SwiftCatsUITests;
+			sourceTree = "<group>";
+		};
 		5C6F86702632D36000691721 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +159,7 @@
 			children = (
 				B882EF9C2436AC2C00421A3C /* SwiftCats */,
 				B882EFB32436AC2F00421A3C /* SwiftCatsTests */,
+				50EE4088263545EE003F4247 /* SwiftCatsUITests */,
 				B882EF9B2436AC2C00421A3C /* Products */,
 			);
 			indentWidth = 4;
@@ -143,6 +171,7 @@
 			children = (
 				B882EF9A2436AC2C00421A3C /* SwiftCats.app */,
 				B882EFB02436AC2F00421A3C /* SwiftCatsTests.xctest */,
+				50EE4087263545EE003F4247 /* SwiftCatsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -189,6 +218,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		50EE4086263545EE003F4247 /* SwiftCatsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50EE408E263545EE003F4247 /* Build configuration list for PBXNativeTarget "SwiftCatsUITests" */;
+			buildPhases = (
+				50EE4083263545EE003F4247 /* Sources */,
+				50EE4084263545EE003F4247 /* Frameworks */,
+				50EE4085263545EE003F4247 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50EE408D263545EE003F4247 /* PBXTargetDependency */,
+			);
+			name = SwiftCatsUITests;
+			productName = SwiftCatsUITests;
+			productReference = 50EE4087263545EE003F4247 /* SwiftCatsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		B882EF992436AC2C00421A3C /* SwiftCats */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B882EFB92436AC2F00421A3C /* Build configuration list for PBXNativeTarget "SwiftCats" */;
@@ -230,10 +277,14 @@
 		B882EF922436AC2C00421A3C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Yilei He";
 				TargetAttributes = {
+					50EE4086263545EE003F4247 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = B882EF992436AC2C00421A3C;
+					};
 					B882EF992436AC2C00421A3C = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -258,11 +309,19 @@
 			targets = (
 				B882EF992436AC2C00421A3C /* SwiftCats */,
 				B882EFAF2436AC2F00421A3C /* SwiftCatsTests */,
+				50EE4086263545EE003F4247 /* SwiftCatsUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		50EE4085263545EE003F4247 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B882EF982436AC2C00421A3C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -282,6 +341,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		50EE4083263545EE003F4247 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50EE408A263545EE003F4247 /* SwiftCatsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B882EF962436AC2C00421A3C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -317,6 +384,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		50EE408D263545EE003F4247 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B882EF992436AC2C00421A3C /* SwiftCats */;
+			targetProxy = 50EE408C263545EE003F4247 /* PBXContainerItemProxy */;
+		};
 		B882EFB22436AC2F00421A3C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B882EF992436AC2C00421A3C /* SwiftCats */;
@@ -336,6 +408,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		50EE408F263545EE003F4247 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SwiftCatsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ace-authors.SwiftCatsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SwiftCats;
+			};
+			name = Debug;
+		};
+		50EE4090263545EE003F4247 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SwiftCatsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ace-authors.SwiftCatsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SwiftCats;
+			};
+			name = Release;
+		};
 		B882EFB72436AC2F00421A3C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -539,6 +647,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		50EE408E263545EE003F4247 /* Build configuration list for PBXNativeTarget "SwiftCatsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50EE408F263545EE003F4247 /* Debug */,
+				50EE4090263545EE003F4247 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B882EF952436AC2C00421A3C /* Build configuration list for PBXProject "SwiftCats" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
