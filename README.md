@@ -2,7 +2,7 @@
 
 ![](doc/res/swiftcat-screens.png)
 
-Welcome to Swift Cat Programing Challenge. This is part of Programming Challenge I participated during tha ANZAC holiday 2021. This programming challenge demonstrates mobile application developoment using technologies mentioned below.
+Welcome to SwiftCat Project - Programing Challenge. This is part of Programming Challenge I participated during ANZAC holiday 2021. This programming challenge demonstrates mobile application developoment using technologies mentioned below.
 
 
 ## First - What you will need
